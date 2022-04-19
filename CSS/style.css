@@ -91,4 +91,49 @@ h3 {
  .card__image {
      width: 100%;
  }
+
+ /* plan */
+ .plan {
+     
+     align-items: center;
+     background: var(--color-btn);
+     border-radius: 30px;
+     justify-content: center;
+     margin: 2rem ;
+     padding: 2rem;
+ }
+ .plan__duration, 
+ .plan__budget  
+  {
+     margin: 0;
+     padding-bottom: 9px;
+     vertical-align: middle;
+ }
  
+ .plan__image {
+     align-self: center;
+     height: 64px;
+     width: 64px;
+ }
+ .plan__amount {
+     align-self: center;
+     font-weight: 500;
+     justify-self: center;
+     margin: 0;
+     vertical-align: middle;
+     width: 160%;
+ }
+
+ .plan__link {
+     align-self: center;
+     color: var(--btn-blue);
+     font-weight: 700;
+     width: 100%;
+ }
+
+ .grid {
+     display: grid;
+ }
+ .grid1x3 {
+     grid-template-columns: repeat(3 , 1fr);
+ }
