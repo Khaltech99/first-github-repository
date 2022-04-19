@@ -8,9 +8,9 @@
 --color-focus: #766cf1;
 }
 html {
-    font-size: 62.5%;
-    font-family: 'Red Hat Display' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     
+    font-family: 'Red Hat Display' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 62.5%;
 }
 
 /* typography */
@@ -34,28 +34,61 @@ h3 {
     font-size: 2rem;
 }
 
+@media screen and (min-width:1024px) {
+    body {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+}
+
  /* button */
 
  .btn {
-     border: 0;
-    
-     outline: 0;
-     line-height: 1.5;
-     width: 100%;
-     text-align: center;
      border-radius: 10px;
-     padding: 2.2rem 6.6rem;
-     margin-top: 7rem;
+     border: 0;
      cursor: pointer;
+     line-height: 1.5;
+     outline: 0;
+     padding: 2.2rem 6.6rem;
+     text-align: center;
+     width: 100%;
  }
 
  .btn-primary {
      background: var(--btn-blue);
+     box-shadow: 0 0 50px 10px var(--color-shadow);
      color: var(--color-btn);
      font-weight: 700;
-     box-shadow: 0 0 50px 10px var(--color-shadow);
  }
 
  .btn:focus {
     background: var(--color-focus);
  }
+
+ /* card */
+.card {
+    border-radius: 10px;
+    border: 1px solid ;
+    overflow: hidden;
+    text-align: center;
+   
+}
+
+.card__header {
+    overflow: hidden;
+    text-align: center; 
+   
+}
+
+ .card__image {
+     width: 100%;
+ }
+ 
