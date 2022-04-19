@@ -1,0 +1,61 @@
+:root {
+--color-plan: hsl(225, 100%, 94%);
+--btn-blue: hsl(245, 75%, 52%);
+--color-btn: hsl(225, 100%, 98%);
+--color-body: hsl(224, 23%, 55%);
+--color-heading: hsl(223, 47%, 23%) ;
+--color-shadow: #a8aebc;
+--color-focus: #766cf1;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Red Hat Display' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    
+}
+
+/* typography */
+body {
+    font-size: 2rem; 
+    color: var(--color-body) ;
+}
+
+h1 , h2 ,h3 {
+    color: var(--color-heading);
+
+}
+
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+ /* button */
+
+ .btn {
+     border: 0;
+    
+     outline: 0;
+     line-height: 1.5;
+     width: 100%;
+     text-align: center;
+     border-radius: 10px;
+     padding: 2.2rem 6.6rem;
+     margin-top: 7rem;
+     cursor: pointer;
+ }
+
+ .btn-primary {
+     background: var(--btn-blue);
+     color: var(--color-btn);
+     font-weight: 700;
+     box-shadow: 0 0 50px 10px var(--color-shadow);
+ }
+
+ .btn:focus {
+    background: var(--color-focus);
+ }
