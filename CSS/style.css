@@ -8,16 +8,20 @@
 --color-focus: #766cf1;
 }
 html {
-    
-    font-family: 'Red Hat Display' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    font-size: 62.5%;
+     font-family: 'Red Hat Display' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+   
 }
 
 /* typography */
 body {
-    font-size: 2rem; 
+    font-size: 100%; 
     color: var(--color-body) ;
+    background: url(/images/pattern-background-mobile.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 h1 , h2 ,h3 {
     color: var(--color-heading);
@@ -25,41 +29,60 @@ h1 , h2 ,h3 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 2.25rem;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 h3 {
     font-size: 2rem;
 }
-
-@media screen and (min-width:1024px) {
-    body {
-        font-size: 1.2rem;
-    }
-    h1 {
-        font-size: 4rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    h3 {
-        font-size: 1.6rem;
-    }
+p {
+    font-size: 0.75rem;
 }
 
- /* button */
+@media screen and (min-width:768px) {
+    body {
+        
+        background: url(/images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+@media screen and (min-width:768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+  
+    p {
+        font-size: 0.75rem;
+    }
+   }
 
+
+    
+    
+   
+
+  
+ /* button */
+ 
  .btn {
      border-radius: 10px;
      border: 0;
      cursor: pointer;
-     line-height: 1.5;
-     outline: 0;
-     padding: 2.2rem 6.6rem;
+     padding: 1rem 3rem;
      text-align: center;
-     width: 100%;
+     width: 100%; 
+     white-space: nowrap;
+    
+    
+    
+
  }
 
  .btn-primary {
@@ -69,16 +92,29 @@ h3 {
      font-weight: 700;
  }
 
- .btn:focus {
+ .btn:hover {
     background: var(--color-focus);
  }
+
+ .btn__link {
+     box-sizing: border-box;
+     justify-content: center;
+ }
+
+
+
+ 
 
  /* card */
 .card {
     border-radius: 10px;
-    border: 1px solid ;
     overflow: hidden;
     text-align: center;
+    background-color: white;
+    margin: 1rem;
+  
+    
+    
    
 }
 
@@ -92,48 +128,105 @@ h3 {
      width: 100%;
  }
 
+ .card__text {
+     padding-left: 2rem;
+     padding-right: 2rem;
+     font-size: 1.2rem; 
+     font-weight: 500;
+ }
+
+
+
  /* plan */
  .plan {
-     
+    
      align-items: center;
      background: var(--color-btn);
-     border-radius: 30px;
-     justify-content: center;
-     margin: 2rem ;
-     padding: 2rem;
+     border-radius: 10px;
+     padding: 0.7rem;
+     margin: 0 2rem;
+    
  }
  .plan__duration, 
  .plan__budget  
   {
      margin: 0;
-     padding-bottom: 9px;
+     padding-bottom: 6px;
      vertical-align: middle;
+     align-self: center;
  }
  
  .plan__image {
-     align-self: center;
+    padding-right: 10rem;
      height: 64px;
      width: 64px;
  }
  .plan__amount {
      align-self: center;
-     font-weight: 500;
+     font-weight: 900;
      justify-self: center;
      margin: 0;
      vertical-align: middle;
-     width: 160%;
+    
+ }
+
+ .plan__amount .plan__budget {
+     font-size: 1rem;
+     opacity: .8;
+     font-weight: 500;
  }
 
  .plan__link {
      align-self: center;
      color: var(--btn-blue);
      font-weight: 700;
-     width: 100%;
+     width: 100%; 
+     margin-left: 2px; 
+   
+     
+      
+ }
+ .plan__link:hover {
+     color: var(--color-focus);
  }
 
  .grid {
      display: grid;
+     
  }
  .grid1x3 {
-     grid-template-columns: repeat(3 , 1fr);
+     grid-template-columns: 25% 50% 25%;
+     
  }
+ 
+ @media screen and (min-width:768px) {
+     .plan__image {
+         margin-right: 50rem;
+         
+     }
+ }
+
+ /* footer */
+
+ .footer {
+     padding: 2rem;
+     justify-content: center;
+     align-items: center;
+ }
+ .footer__text {
+     font-weight: 900;
+     margin-top: 1.5rem;
+     font-size: 1rem;
+ }
+
+ @media screen and (min-width:768px) {
+    .card {
+        max-width: 325px;
+        margin: 6rem auto;
+    }
+    .plan__duration {
+        font-size: 1.1rem;
+       align-self: center;
+    }
+
+}
