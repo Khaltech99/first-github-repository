@@ -16,7 +16,7 @@ html {
 body {
     font-size: 100%; 
     color: var(--color-body) ;
-    background: url(/images/pattern-background-mobile.svg);
+    background-image: url(/images/pattern-background-mobile.svg);
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -44,7 +44,7 @@ p {
 @media screen and (min-width:768px) {
     body {
         
-        background: url(/images/pattern-background-desktop.svg);
+        background-image: url(/images/pattern-background-desktop.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
